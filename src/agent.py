@@ -3,13 +3,13 @@
     Creates the agent with tools, memory and prompt
 """
 
-from langchain.agents import AgentExecuter , create_tool_calling_agent
+from langchain.agents import AgentExecutor , create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.memory import ConversationBufferWindowMemory
 from src.config import llm , SYSTEM_PROMPT
 
 
-def build_agent(tools: list)-> AgentExecuter:
+def build_agent(tools: list)-> AgentExecutor:
     """Build the Neuron agent"""
 
     # prompt_template
