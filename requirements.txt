@@ -5,3 +5,4 @@ tavily-python
 faiss-cpu
 python-dotenv
 rich
+beautifulsoup4

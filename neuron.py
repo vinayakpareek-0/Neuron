@@ -8,6 +8,7 @@ from rich.panel import Panel
 
 from src.agent import  build_agent
 from src.tools.web_search import search_tool
+from src.tools.url_summarizer import summarize_url
 
 console= Console()
 
@@ -23,7 +24,7 @@ def display_welcome():
 
 
 def main():
-    tools = [search_tool]
+    tools = [search_tool, summarize_url]
     agent = build_agent(tools)
     display_welcome()
     while True:
