@@ -10,8 +10,8 @@ from langchain_groq import ChatGroq
 load_dotenv()
 
 llm = ChatGroq(
-    model = "llama-3.3-70b-versatile",
-    temperature=0.7,
+    model = "llama-3.1-8b-instant",
+    temperature=0.3,
 )
 
 SYSTEM_PROMPT = """You are a Neuron, an ai powered research and workflow assistant.

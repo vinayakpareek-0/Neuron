@@ -35,6 +35,6 @@ def build_agent(tools: list)-> AgentExecutor:
         agent =agent , 
         tools =tools , 
         memory = memory,
-        verbose = False,
+        verbose = True,
         handle_parsing_errors =True,
     )

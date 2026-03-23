@@ -7,6 +7,7 @@ from rich.markdown import Markdown
 from rich.panel import Panel
 
 from src.agent import  build_agent
+from src.tools.web_search import search_tool
 
 console= Console()
 
@@ -22,7 +23,7 @@ def display_welcome():
 
 
 def main():
-    tools = []
+    tools = [search_tool]
     agent = build_agent(tools)
     display_welcome()
     while True:
@@ -45,7 +46,11 @@ def main():
             console.print("\n[cyan]Goodbye![/cyan]\n")
             break
         except Exception as e:
-            console.print(f"\n[red]Error: {e}[/red]\n")
+            import traceback
+            console.print(f"\n[red]Error: {e}[/red]")
+            console.print(f"[dim]{traceback.format_exc()}[/dim]\n")
+
+
 
 if __name__ == "__main__":
     main()
