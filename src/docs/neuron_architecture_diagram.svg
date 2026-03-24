@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="agentGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c3b1e1"/>
+      <stop offset="100%" stop-color="#a78bda"/>
+    </linearGradient>
+    <linearGradient id="toolGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b2e0d4"/>
+      <stop offset="100%" stop-color="#7fd1bb"/>
+    </linearGradient>
+    <linearGradient id="extGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fcd5b5"/>
+      <stop offset="100%" stop-color="#f5b87a"/>
+    </linearGradient>
+    <linearGradient id="storeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b8d4f0"/>
+      <stop offset="100%" stop-color="#8bb8e0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="680" fill="#fafafa" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#333">Neuron — Architecture</text>
+  <line x1="100" y1="48" x2="800" y2="48" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- User -->
+  <rect x="355" y="65" width="190" height="50" rx="25" fill="#f0ece3" stroke="#c9c1b0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="95" text-anchor="middle" font-size="15" font-weight="600" fill="#555">User</text>
+
+  <!-- Arrow: User to CLI -->
+  <line x1="450" y1="115" x2="450" y2="145" stroke="#888" stroke-width="1.5"/>
+  <polygon points="445,143 455,143 450,151" fill="#888"/>
+
+  <!-- CLI -->
+  <rect x="330" y="151" width="240" height="55" rx="10" fill="url(#agentGrad)" stroke="#9678cc" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="174" text-anchor="middle" font-size="14" font-weight="700" fill="#4a2d8a">Rich CLI</text>
+  <text x="450" y="192" text-anchor="middle" font-size="11" fill="#6b4dab" font-style="italic">neuron.py</text>
+
+  <!-- Arrow: CLI to Agent -->
+  <line x1="450" y1="206" x2="450" y2="236" stroke="#888" stroke-width="1.5"/>
+  <polygon points="445,234 455,234 450,242" fill="#888"/>
+
+  <!-- Agent Box -->
+  <rect x="295" y="242" width="310" height="55" rx="10" fill="url(#agentGrad)" stroke="#9678cc" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="265" text-anchor="middle" font-size="14" font-weight="700" fill="#4a2d8a">AgentExecutor</text>
+  <text x="450" y="284" text-anchor="middle" font-size="11" fill="#6b4dab" font-style="italic">Memory + Prompt + Tool Calling</text>
+
+  <!-- Arrow: Agent to Tools -->
+  <line x1="450" y1="297" x2="450" y2="330" stroke="#888" stroke-width="1.5"/>
+  <polygon points="445,328 455,328 450,336" fill="#888"/>
+
+  <!-- Tools container -->
+  <rect x="50" y="340" width="800" height="110" rx="12" fill="none" stroke="#5aab8e" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="70" y="360" font-size="12" fill="#5aab8e" font-weight="600">Tools</text>
+
+  <!-- Tool boxes -->
+  <rect x="70" y="370" width="140" height="65" rx="8" fill="url(#toolGrad)" stroke="#5aab8e" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="140" y="393" text-anchor="middle" font-size="12" font-weight="700" fill="#1a6b4a">Web Search</text>
+  <text x="140" y="409" text-anchor="middle" font-size="9" fill="#2d8a63" font-style="italic">TavilySearchResults</text>
+
+  <rect x="230" y="370" width="140" height="65" rx="8" fill="url(#toolGrad)" stroke="#5aab8e" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="300" y="393" text-anchor="middle" font-size="12" font-weight="700" fill="#1a6b4a">URL Summarizer</text>
+  <text x="300" y="409" text-anchor="middle" font-size="9" fill="#2d8a63" font-style="italic">WebBaseLoader + Chain</text>
+
+  <rect x="390" y="370" width="140" height="65" rx="8" fill="url(#toolGrad)" stroke="#5aab8e" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="460" y="393" text-anchor="middle" font-size="12" font-weight="700" fill="#1a6b4a">Content Drafter</text>
+  <text x="460" y="409" text-anchor="middle" font-size="9" fill="#2d8a63" font-style="italic">PromptTemplate + Parser</text>
+
+  <rect x="550" y="370" width="140" height="65" rx="8" fill="url(#toolGrad)" stroke="#5aab8e" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="620" y="393" text-anchor="middle" font-size="12" font-weight="700" fill="#1a6b4a">Knowledge Base</text>
+  <text x="620" y="409" text-anchor="middle" font-size="9" fill="#2d8a63" font-style="italic">FAISS + Embeddings</text>
+
+  <rect x="710" y="370" width="130" height="65" rx="8" fill="url(#toolGrad)" stroke="#5aab8e" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="775" y="393" text-anchor="middle" font-size="12" font-weight="700" fill="#1a6b4a">Report Export</text>
+  <text x="775" y="409" text-anchor="middle" font-size="9" fill="#2d8a63" font-style="italic">File I/O + Template</text>
+
+  <!-- External Providers -->
+  <rect x="50" y="510" width="380" height="100" rx="12" fill="none" stroke="#d4a04a" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="70" y="530" font-size="12" fill="#d4a04a" font-weight="600">External Providers</text>
+
+  <rect x="70" y="540" width="110" height="55" rx="8" fill="url(#extGrad)" stroke="#d4a04a" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="125" y="563" text-anchor="middle" font-size="12" font-weight="700" fill="#8a5a1a">Groq API</text>
+  <text x="125" y="579" text-anchor="middle" font-size="9" fill="#a06a2a" font-style="italic">Llama 3.3 70B</text>
+
+  <rect x="200" y="540" width="110" height="55" rx="8" fill="url(#extGrad)" stroke="#d4a04a" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="255" y="563" text-anchor="middle" font-size="12" font-weight="700" fill="#8a5a1a">Tavily API</text>
+  <text x="255" y="579" text-anchor="middle" font-size="9" fill="#a06a2a" font-style="italic">Web Search</text>
+
+  <rect x="330" y="540" width="90" height="55" rx="8" fill="url(#extGrad)" stroke="#d4a04a" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="375" y="563" text-anchor="middle" font-size="12" font-weight="700" fill="#8a5a1a">HuggingFace</text>
+  <text x="375" y="579" text-anchor="middle" font-size="9" fill="#a06a2a" font-style="italic">MiniLM-L6-v2</text>
+
+  <!-- Local Storage -->
+  <rect x="500" y="510" width="350" height="100" rx="12" fill="none" stroke="#5a8ab5" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="520" y="530" font-size="12" fill="#5a8ab5" font-weight="600">Local Storage</text>
+
+  <rect x="520" y="540" width="145" height="55" rx="8" fill="url(#storeGrad)" stroke="#5a8ab5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="592" y="563" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a6b">FAISS Index</text>
+  <text x="592" y="579" text-anchor="middle" font-size="9" fill="#2a5a7a" font-style="italic">knowledge_base/</text>
+
+  <rect x="685" y="540" width="145" height="55" rx="8" fill="url(#storeGrad)" stroke="#5a8ab5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="757" y="563" text-anchor="middle" font-size="12" font-weight="700" fill="#1a4a6b">Reports</text>
+  <text x="757" y="579" text-anchor="middle" font-size="9" fill="#2a5a7a" font-style="italic">reports/*.md</text>
+
+  <!-- Dashed connections: Tools to bottom -->
+  <line x1="350" y1="297" x2="125" y2="540" stroke="#d4a04a" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+  <line x1="140" y1="435" x2="255" y2="540" stroke="#d4a04a" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+  <line x1="620" y1="435" x2="375" y2="540" stroke="#d4a04a" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+  <line x1="620" y1="435" x2="592" y2="540" stroke="#5a8ab5" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+  <line x1="775" y1="435" x2="757" y2="540" stroke="#5a8ab5" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+
+  <!-- Legend -->
+  <line x1="70" y1="650" x2="100" y2="650" stroke="#888" stroke-width="1.5"/>
+  <text x="105" y="654" font-size="10" fill="#888">Sync flow</text>
+  <line x1="200" y1="650" x2="230" y2="650" stroke="#888" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="235" y="654" font-size="10" fill="#888">Dependency</text>
+</svg>
