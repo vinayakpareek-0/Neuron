@@ -11,6 +11,7 @@ from src.tools.web_search import search_tool
 from src.tools.url_summarizer import summarize_url
 from src.tools.content_drafter import draft_content
 from src.tools.kb import save_to_kb, search_kb
+from src.tools.report_exporter import export_report
 
 console= Console()
 
@@ -26,7 +27,7 @@ def display_welcome():
 
 
 def main():
-    tools = [search_tool, summarize_url, draft_content, save_to_kb, search_kb]
+    tools = [search_tool, summarize_url, draft_content, save_to_kb, search_kb, export_report]
     agent = build_agent(tools)
     display_welcome()
     while True:
