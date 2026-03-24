@@ -6,3 +6,5 @@ faiss-cpu
 python-dotenv
 rich
 beautifulsoup4
+sentence-transformers
+langchain-huggingface
